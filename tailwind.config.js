@@ -11,6 +11,15 @@ module.exports = {
       Beige: { 100: "#EAE0DA", 50: "#f7f3f0" },
       Black: { 100: "#1D1D1D", 80: "#ACB8C4", 50: "#DEDEDE" },
     },
+    Font: {
+      100: "40px",
+      90: "32px",
+      80: "28px",
+      70: "20px",
+      60: "16px",
+      50: "14px",
+      40: "12px",
+    },
   },
   plugins: [require("daisyui")],
 };
