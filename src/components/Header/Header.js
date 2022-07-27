@@ -1,6 +1,9 @@
 import Vivino from "../Svg/Logo/Vivino";
-
+import { useContext } from "react";
+import { ModalContext } from "../../Contexts/ModalContext/ModalContext";
 const Header = () => {
+  const { handleOpen } = useContext(ModalContext);
+
   return (
     <header className=" shadow-md">
       <nav className="flex items-center max-w-7xl  mx-auto justify-between p-6 ">
@@ -9,7 +12,7 @@ const Header = () => {
             <Vivino />
           </div>
           <input
-            className="  rounded-full  border  w-96  p-2  "
+            className="  rounded-full  border  w-96  p-2 border-Black-80"
             type="text"
             placeholder="🔍   Search any HangOver"
           />
@@ -20,7 +23,12 @@ const Header = () => {
               <i class="fa-solid fa-user text-2xl" />
             </button>
           </div>
-          <button className="btn   bg-point-color border-point-color">
+          <button
+            className="btn  bg-mainColor"
+            onClick={() => {
+              handleOpen();
+            }}
+          >
             Login
           </button>
         </div>

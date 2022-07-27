@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    default: {
+    colors: {
       ///흰색
       backGoround: "#FFFFFF",
       //빨간색 포인트
@@ -13,7 +13,7 @@ module.exports = {
       Beige: { 100: "#EAE0DA", 50: "#f7f3f0" },
       Black: { 100: "#1D1D1D", 80: "#ACB8C4", 50: "#DEDEDE" },
     },
-    Font: {
+    fontSize: {
       100: "40px",
       90: "32px",
       80: "28px",
