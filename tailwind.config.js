@@ -3,6 +3,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     default: {
+      ///흰색
+      backGoround: "#FFFFFF",
       //빨간색 포인트
       mainColor: "#A61A30",
       //가격 버튼
