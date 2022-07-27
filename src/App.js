@@ -3,12 +3,14 @@ import Main from "./pages/Main/Main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Modal from "./components/Modal/Modal";
 import { ModalProvider } from "./Contexts/ModalContext/ModalContext";
-
+import Login from "./pages/Login/Login";
 function App() {
   return (
     <BrowserRouter>
       <ModalProvider>
-        <Modal />
+        <Modal>
+          <Login />
+        </Modal>
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
