@@ -1,0 +1,30 @@
+.swiper {
+  max-width: 1200px;
+}
+
+.swiper-button-next {
+  background: url(../Svg/Arrow/chevron-right-solid.svg) no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+  background-color: aliceblue;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  right: -25px;
+}
+
+.swiper-button-prev {
+  background: url(../Svg/Arrow/chevron-left-solid.svg) no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+  background-color: aliceblue;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  left: -25px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}

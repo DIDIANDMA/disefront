@@ -24,7 +24,7 @@ const MainContainer = ({ children }) => {
   };
 
   return (
-    <article className=" py-10 border-Black-100">
+    <article className=" py-10 border-Black-100 ">
       <section>
         <div>
           <h1 className=" text-100  font-bold leading-10">
