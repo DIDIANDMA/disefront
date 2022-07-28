@@ -17,12 +17,11 @@ const Header = () => {
             placeholder="🔍   Search any HangOver"
           />
         </div>
-        <div className="flex items-center justify-around grow">
-          <div className="flex justify-end w-4/5">
-            <button>
-              <i class="fa-solid fa-user text-2xl" />
-            </button>
-          </div>
+        <div className="flex items-center justify-around ">
+          <button className=" bg-Black-80 p-3 mx-4 rounded-full">
+            <i class="fa-solid fa-user text-2xl" />
+          </button>
+
           <button
             className="btn  bg-mainColor"
             onClick={() => {

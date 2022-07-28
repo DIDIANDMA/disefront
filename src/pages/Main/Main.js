@@ -1,5 +1,11 @@
+import MainContainer from "./MainContainer/MainContainer";
+
 const Main = () => {
-  return <main className="items-center max-w-5xl  mx-auto">aa</main>;
+  return (
+    <main className="items-center max-w-7xl  mx-auto">
+      <MainContainer />
+    </main>
+  );
 };
 
 export default Main;
