@@ -41,7 +41,7 @@ const MainCarousel = () => {
         mainData.map(item => {
           const { id, name } = item;
           return (
-            <SwiperSlide key={name} className=" w-8">
+            <SwiperSlide key={name} className=" w-8  ">
               <SliderCard item={item} />
             </SwiperSlide>
           );

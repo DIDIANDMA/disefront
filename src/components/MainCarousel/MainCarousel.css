@@ -2,29 +2,48 @@
   max-width: 1200px;
 }
 
+.swiper-initialized {
+  padding: 50px 40px;
+  background-color: #ffff;
+}
+
 .swiper-button-next {
   background: url(../Svg/Arrow/chevron-right-solid.svg) no-repeat;
   background-size: 15px 15px;
   background-position: center;
-  background-color: aliceblue;
+  background-color: #ffff;
+  box-shadow: 0 4px 20px 0 rgb(66 66 66 / 20%);
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  right: -25px;
+  right: 15px;
 }
 
 .swiper-button-prev {
   background: url(../Svg/Arrow/chevron-left-solid.svg) no-repeat;
   background-size: 15px 15px;
   background-position: center;
-  background-color: aliceblue;
+  background-color: #ffff;
+  box-shadow: 0 4px 20px 0 rgb(66 66 66 / 20%);
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  left: -25px;
+  left: 15px;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+}
+
+.mainImg:hover {
+  transform: translateY(-20px);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+.mainCard:hover .mainImg {
+  transform: translateY(-20px);
+  transition-duration: 0.7s;
+  cursor: pointer;
 }

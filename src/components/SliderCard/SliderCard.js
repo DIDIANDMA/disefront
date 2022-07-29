@@ -4,10 +4,12 @@ const SliderCard = ({ item }) => {
     <div
       id={id}
       key={name}
-      className=" border-solid shadow-lg rounded-2xl  bg-priceBtnColor  last: flex-col "
+      className="mainCard border-solid shadow-lg rounded-2xl    last: flex-col hover:shadow-Black-100/40  hover:cursor-pointer"
     >
-      <div className="flex items-center ">
-        <img src="./images/test.png" className=" h-72 " alt="맥주병" />
+      <div className="flex items-center  ">
+        <div className=" relative bottom-10  ">
+          <img src={img_url} className="mainImg w-36 h-72 z-50" alt="맥주병" />
+        </div>
         <div className=" flex-col items-center">
           <h1>{rating}</h1>
           <p>재고</p>
