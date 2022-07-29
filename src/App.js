@@ -1,25 +1,6 @@
-import Header from "./components/Header/Header";
-import Main from "./pages/Main/Main";
-import Footer from "./components/Footer/Footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Modal from "./components/Modal/Modal";
-import { ModalProvider } from "./Contexts/ModalContext/ModalContext";
-import Login from "./pages/Login/Login";
+import MainRouter from "./Router/MainRouter";
 function App() {
-  return (
-    <BrowserRouter>
-      <ModalProvider>
-        <Modal>
-          <Login />
-        </Modal>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Main />} />
-        </Routes>
-        <Footer />
-      </ModalProvider>
-    </BrowserRouter>
-  );
+  return <MainRouter />;
 }
 
 export default App;
