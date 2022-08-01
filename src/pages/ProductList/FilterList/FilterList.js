@@ -27,10 +27,10 @@ const FilterList = () => {
   }, []);
 
   return (
-    <section className=" flex flex-col  grow ">
+    <section className=" flex flex-col ">
       {isLoading &&
         btnData.map(data => {
-          const { title, subtitle, content, id } = data;
+          const { title, subtitle, content, id, type } = data;
           return (
             <FilterContainer
               key={title}
@@ -39,19 +39,20 @@ const FilterList = () => {
               subtitle={subtitle}
               content={content}
             >
-              {content.map(txt => {
-                const { id, content } = txt;
-                return (
-                  <Btn
-                    key={id}
-                    id={id}
-                    isSelected={isSelected}
-                    handleClick={handleClick}
-                  >
-                    {content}
-                  </Btn>
-                );
-              })}
+              {type === "button" &&
+                content.map(txt => {
+                  const { id, content } = txt;
+                  return (
+                    <Btn
+                      key={id}
+                      id={id}
+                      isSelected={isSelected}
+                      handleClick={handleClick}
+                    >
+                      {content}
+                    </Btn>
+                  );
+                })}
             </FilterContainer>
           );
         })}

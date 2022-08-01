@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "name": "술명1",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 2,
+    "name": "술명2",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 3,
+
+    "name": "술명3",
+    "explanation": "explanation",
+    "origin": "origin",
+    " img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 4,
+
+    "name": "술명4",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 5,
+    "name": "술명5",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 6,
+    "name": "술명6",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 7,
+    "name": "술명7",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 8,
+    "name": "술명8",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 9,
+    "name": "술명9",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 10,
+    "name": "술명10",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 11,
+    "name": "술명11",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 12,
+    "name": "술명12",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 13,
+    "name": "술명13",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 14,
+    "name": "술명14",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 15,
+    "name": "술명15",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  },
+  {
+    "id": 16,
+    "name": "술명16",
+    "explanation": "explanation",
+    "origin": "origin",
+    "img_url": "./images/test.png",
+    "price": "20000",
+    "rating": "4.5"
+  }
+]

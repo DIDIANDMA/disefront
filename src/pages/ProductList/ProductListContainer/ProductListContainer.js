@@ -11,7 +11,7 @@ const ProductListContainer = ({ children }) => {
           <select />
         </section>
       </article>
-      <article className=" flex grow ">{children}</article>
+      <article className=" flex  ">{children}</article>
     </main>
   );
 };

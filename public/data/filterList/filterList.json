@@ -1,6 +1,7 @@
 [
   {
     "title": "와인 종류",
+    "type": "button",
     "subtitle": "Select multiple",
     "content": [
       { "id": 1, "content": "Red" },
@@ -13,16 +14,19 @@
   },
   {
     "title": "가격",
+    "type": "nonbutton",
     "subtitle": "원",
     "content": [10000, 40000]
   },
   {
     "title": "별점",
+    "type": "nonbutton",
     "subtitle": null,
     "content": [5, 4, 3, 2, 1]
   },
   {
     "title": "국가명",
+    "type": "button",
     "subtitle": null,
     "content": [
       { "id": 1, "content": "Argentina" },
