@@ -7,7 +7,7 @@ const Modal = ({ children }) => {
   if (isOpen) {
     return ReactDOM.createPortal(
       <div
-        className="fixed top-0 left-0 h-screen w-full flex items-center justify-center "
+        className="fixed top-0 left-0 h-screen w-full flex items-center justify-center z-50 "
         style={{ background: "rgba(0,0,0,0.8)" }}
         onClick={() => {
           handleOpen();
