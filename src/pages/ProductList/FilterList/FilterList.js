@@ -5,16 +5,22 @@ import Btn from "../../../components/Btn/Btn";
 const FilterList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [btnData, setBtnData] = useState([]);
-  const [isSelected, setIsSelected] = useState({ id: 1 });
+  const [isSelected, setIsSelected] = useState([{ id: 1, content: "Red" }]);
 
   const handleClick = e => {
-    const { id } = e.target;
-    if (isSelected.id === parseInt(id)) {
-      return;
-    } else
-      setIsSelected({
-        id: parseInt(id),
-      });
+    const { id, name } = e.target;
+    const check = isSelected.find(item => item.content === name);
+    if (check) {
+      setIsSelected(isSelected.filter(items => items.content !== name));
+    } else {
+      setIsSelected(prev => [
+        ...prev,
+        {
+          id: parseInt(id),
+          content: name,
+        },
+      ]);
+    }
   };
 
   useEffect(() => {
@@ -44,6 +50,7 @@ const FilterList = () => {
                   const { id, content } = txt;
                   return (
                     <Btn
+                      name={content}
                       key={id}
                       id={id}
                       isSelected={isSelected}
