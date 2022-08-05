@@ -18,7 +18,7 @@ const CardList = () => {
   }, []);
 
   return (
-    <section className=" grow">
+    <section className=" grow mx-6">
       {isLoading &&
         mainData.map(item => {
           const { id, name } = item;

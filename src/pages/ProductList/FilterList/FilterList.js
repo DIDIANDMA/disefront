@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import FilterContainer from "../FilterContainer/FilterContainer";
 import Btn from "../../../components/Btn/Btn";
+import PriceRange from "../PriceRange/PriceRange";
 const FilterList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [btnData, setBtnData] = useState([]);
@@ -60,6 +61,8 @@ const FilterList = () => {
                     </Btn>
                   );
                 })}
+
+              {type === "slider" && <PriceRange />}
             </FilterContainer>
           );
         })}
