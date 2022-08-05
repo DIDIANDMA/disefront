@@ -8,7 +8,7 @@ const Btn = ({ children, isSelected, id, handleClick, name }) => {
       name={name}
       id={id}
       onClick={e => handleClick(e)}
-      className={`w-20 h-8 border border-mainColor rounded-3xl m-1 font-semibold${result}`}
+      className={`w-20 h-8 border   border-mainColor rounded-3xl m-2 font-semibold${result}`}
     >
       {children}
     </button>
