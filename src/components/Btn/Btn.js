@@ -1,5 +1,5 @@
-const Btn = ({ children, isSelected, id, handleClick }) => {
-  const isSame = isSelected.id === parseInt(id);
+const Btn = ({ children, isSelected, id, handleClick, name }) => {
+  const isSame = isSelected.content === name;
   const result = isSame ? "  bg-mainColor " : " bg-backGround";
   return (
     <button

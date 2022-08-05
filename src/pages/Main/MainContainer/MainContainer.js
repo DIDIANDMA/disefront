@@ -38,6 +38,7 @@ const MainContainer = ({ children }) => {
               return (
                 <Btn
                   id={id}
+                  name={content}
                   key={content}
                   isSelected={isSelected}
                   handleClick={handleClick}
