@@ -1,7 +1,6 @@
-import ProductList from "./pages/ProductList/ProductList";
-
+import MainRouter from "./Router/MainRouter";
 function App() {
-  return <ProductList />;
+  return <MainRouter />;
 }
 
 export default App;
