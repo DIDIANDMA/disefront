@@ -18,6 +18,7 @@ const MainRouter = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/explore" element={<ProductList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
