@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "../../../components/Card/Card";
-const TYPE = "productList";
+import Lcard from "../../../components/Lcard/Lcard";
+
 const CardList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [mainData, setMainData] = useState([]);
@@ -22,7 +22,7 @@ const CardList = () => {
       {isLoading &&
         mainData.map(item => {
           const { id, name } = item;
-          return <Card item={item} type={TYPE} />;
+          return <Lcard item={item} />;
         })}
     </section>
   );
