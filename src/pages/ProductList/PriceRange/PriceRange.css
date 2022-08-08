@@ -1,0 +1,15 @@
+@tailwind variants;
+
+.rc-slider-horizontal {
+  height: 14px;
+  width: 80%;
+  flex-grow: 1;
+}
+.rc-slider-track {
+  background-color: theme("colors.mainColor");
+}
+.rc-slider-handle {
+  background-color: theme("colors.mainColor");
+  border: theme("colors.mainColor");
+  opacity: 100%;
+}
