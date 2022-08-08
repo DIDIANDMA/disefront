@@ -5,7 +5,7 @@ const FilterContainer = ({ children, title, subtitle }) => {
         <span className=" text-70 font-bold ">{title}</span>
         {subtitle && <p>{subtitle}</p>}
       </div>
-      <div className="flex flex-wrap justify-around  p-2">{children}</div>
+      <div className=" flex flex-wrap ">{children}</div>
     </section>
   );
 };
