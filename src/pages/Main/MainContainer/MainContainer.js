@@ -10,17 +10,22 @@ const FILTER = [
 const FILTER_MAP = new Map(FILTER.map(item => [item.id, item.content]));
 
 const MainContainer = ({ children }) => {
-  const [isSelected, setIsSelected] = useState({ id: 1, content: 20000 });
+  const [isSelected, setIsSelected] = useState([{ id: 1, content: 20000 }]);
 
   const handleClick = e => {
-    const { id } = e.target;
-    if (isSelected.id === parseInt(id)) {
-      return;
-    } else
-      setIsSelected({
-        id: parseInt(id),
-        content: FILTER_MAP.get(parseInt(id)),
-      });
+    const { id, name } = e.target;
+    const check = isSelected.find(item => item.content === name);
+    if (check) {
+      setIsSelected(isSelected.filter(items => items.content !== name));
+    } else {
+      setIsSelected(prev => [
+        ...prev,
+        {
+          id: parseInt(id),
+          content: name,
+        },
+      ]);
+    }
   };
 
   return (
@@ -47,7 +52,8 @@ const MainContainer = ({ children }) => {
             })}
           </div>
           <p className=" text-40 py-3 font-semibold">
-            {isSelected.content.toLocaleString()}원 이하의 와인이 모여있어요
+            {isSelected.map(item => item.content)[0].toLocaleString()}원 이하의
+            와인이 모여있어요
           </p>
         </div>
       </section>

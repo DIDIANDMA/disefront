@@ -1,0 +1,44 @@
+[
+  {
+    "title": "와인 종류",
+    "type": "button",
+    "subtitle": "Select multiple",
+    "content": [
+      { "id": 1, "content": "Red" },
+      { "id": 2, "content": "White" },
+      { "id": 3, "content": "Sparkling" },
+      { "id": 4, "content": "Rose" },
+      { "id": 5, "content": "Dessert" },
+      { "id": 6, "content": "Fortified" }
+    ]
+  },
+  {
+    "title": "가격",
+    "type": "slider",
+    "subtitle": "원",
+    "content": [10000, 40000]
+  },
+  {
+    "title": "별점",
+    "type": "nonbutton",
+    "subtitle": null,
+    "content": [5, 4, 3, 2, 1]
+  },
+  {
+    "title": "국가명",
+    "type": "button",
+    "subtitle": null,
+    "content": [
+      { "id": 1, "content": "Argentina" },
+      { "id": 2, "content": "Australia" },
+      { "id": 3, "content": "Austria" },
+      { "id": 4, "content": "Chile" },
+      { "id": 5, "content": "France" },
+      { "id": 6, "content": "Germany" },
+      { "id": 7, "content": "Italy" },
+      { "id": 8, "content": "Portugal" },
+      { "id": 9, "content": "Spain" },
+      { "id": 10, "content": "USA" }
+    ]
+  }
+]
