@@ -1,5 +1,6 @@
+import MainRouter from "./Router/MainRouter";
 function App() {
-  return <div> app</div>;
+  return <MainRouter />;
 }
 
 export default App;
