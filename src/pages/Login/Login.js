@@ -13,7 +13,14 @@ const Login = () => {
       <div className=" flex items-center justify-between mx-auto ">
         <KakaoLogin
           token={process.env.REACT_APP_KAKAO_KEY}
-          onSuccess={message => console.log(message)}
+          onSuccess={message => {
+            if (message) {
+              localStorage.setItem(
+                "kakao_token",
+                message.response.access_token
+              );
+            }
+          }}
           onFail={err => console.log(err)}
         >
           <button id="custom-login-btn">

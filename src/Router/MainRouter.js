@@ -5,6 +5,8 @@ import Modal from "../components/Modal/Modal";
 import Login from "../pages/Login/Login";
 import { ModalProvider } from "../Contexts/ModalContext/ModalContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const MainRouter = () => {
   return (
