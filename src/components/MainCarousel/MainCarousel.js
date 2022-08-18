@@ -6,25 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "./MainCarousel.css";
 
-const MainCarousel = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [mainData, setMainData] = useState([]);
-  useEffect(() => {
-    axios
-      .get("data/mainProduct/mainProduct.json")
-      .then(res => {
-        if (res) {
-          setIsLoading(true);
-          setMainData(res.data);
-        }
-      })
-      .catch(e => console.log(e));
-  }, []);
-
+const MainCarousel = ({ mainData }) => {
   return (
     <Swiper
       slidesPerView={4}
@@ -37,7 +21,7 @@ const MainCarousel = () => {
       navigation={true}
       modules={[Pagination, Navigation]}
     >
-      {isLoading &&
+      {mainData &&
         mainData.map(item => {
           const { id, name } = item;
           return (

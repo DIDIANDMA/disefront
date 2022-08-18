@@ -8,7 +8,11 @@ const SliderCard = ({ item }) => {
     >
       <div className="flex items-center  ">
         <div className=" relative bottom-10  ">
-          <img src={img_url} className="mainImg w-36 h-72 z-50" alt="맥주병" />
+          <img
+            src={`http://${img_url}`}
+            className="mainImg w-36 h-72 z-50"
+            alt="맥주병"
+          />
         </div>
         <div className=" flex-col items-center">
           <h1>{rating}</h1>
