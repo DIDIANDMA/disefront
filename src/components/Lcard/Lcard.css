@@ -1,0 +1,11 @@
+.mainImg:hover {
+  transform: translateY(-20px);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+.large:hover .mainImg {
+  transform: translateY(-20px);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
