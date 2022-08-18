@@ -4,9 +4,11 @@ import { ModalContext } from "../../Contexts/ModalContext/ModalContext";
 import AXIOSCON from "../../axios";
 
 const Header = () => {
+  const login = localStorage.getItem("token");
   const [userInput, setUserInput] = useState("");
   const [searchData, setSearchData] = useState([]);
-  const { handleOpen } = useContext(ModalContext);
+  const { handleOpen, isLogin } = useContext(ModalContext);
+
   const handleSearch = e => {
     const { value } = e.target;
     if (value.trim().length > 0) {
@@ -50,7 +52,7 @@ const Header = () => {
               handleOpen();
             }}
           >
-            Login
+            {isLogin ? "Logout" : "Login"}
           </button>
         </div>
       </nav>
