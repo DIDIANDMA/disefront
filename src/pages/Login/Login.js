@@ -1,4 +1,5 @@
 import KakaoLogin from "react-kakao-login";
+import axios from "axios";
 
 const Login = () => {
   return (
@@ -14,12 +15,21 @@ const Login = () => {
         <KakaoLogin
           token={process.env.REACT_APP_KAKAO_KEY}
           onSuccess={message => {
-            if (message) {
-              localStorage.setItem(
-                "kakao_token",
-                message.response.access_token
-              );
-            }
+            console.log(message.response.access_token);
+            // if (message.response.access_token) {
+            //   axios
+            //     .post("http://15.164.163.31:8002/users/kakaologin", {
+            //       headers: {
+            //         Authorization: message.response.access_toke,
+            //       },
+            //     })
+            //     .then(res => {
+            //       if (res.status === 200) {
+            //         console.log("hi");
+            //       }
+            //     })
+            //     .catch(e => console.log(e));
+            // }
           }}
           onFail={err => console.log(err)}
         >
