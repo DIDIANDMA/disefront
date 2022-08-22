@@ -1,33 +1,6 @@
-import { useState } from "react";
 import Btn from "../../../components/Btn/Btn";
 
-const FILTER = [
-  { id: 1, content: 20000 },
-  { id: 2, content: 30000 },
-  { id: 3, content: 40000 },
-  { id: 4, content: 50000 },
-];
-const FILTER_MAP = new Map(FILTER.map(item => [item.id, item.content]));
-
-const MainContainer = ({ children }) => {
-  const [isSelected, setIsSelected] = useState([{ id: 1, content: 20000 }]);
-
-  const handleClick = e => {
-    const { id, name } = e.target;
-    const check = isSelected.find(item => item.content === name);
-    if (check) {
-      setIsSelected(isSelected.filter(items => items.content !== name));
-    } else {
-      setIsSelected(prev => [
-        ...prev,
-        {
-          id: parseInt(id),
-          content: name,
-        },
-      ]);
-    }
-  };
-
+const MainContainer = ({ children, isSelected, handleClick, FILTER }) => {
   return (
     <article className=" py-10 border-Black-100 ">
       <section>
@@ -52,8 +25,7 @@ const MainContainer = ({ children }) => {
             })}
           </div>
           <p className=" text-40 py-3 font-semibold">
-            {isSelected.map(item => item.content)[0].toLocaleString()}원 이하의
-            와인이 모여있어요
+            {isSelected.content.toLocaleString()}원 이상의 와인이 모여있어요
           </p>
         </div>
       </section>

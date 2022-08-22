@@ -1,6 +1,9 @@
 import KakaoLogin from "react-kakao-login";
+import { useContext } from "react";
+import { ModalContext } from "../../Contexts/ModalContext/ModalContext";
 
 const Login = () => {
+  const { setIsLogin } = useContext(ModalContext);
   return (
     <section className=" flex items-center justify-between    rounded-lg  w-2/4  bg-backGoround  ">
       <div className="h-1/2 w-1/2  ">
@@ -13,8 +16,15 @@ const Login = () => {
       <div className=" flex items-center justify-between mx-auto ">
         <KakaoLogin
           token={process.env.REACT_APP_KAKAO_KEY}
-          onSuccess={message => console.log(message)}
-          onFail={err => console.log(err)}
+          onSuccess={message => {
+            if (message) {
+              localStorage.setItem("token", message.response.access_token);
+              setIsLogin(true);
+            }
+          }}
+          onFail={err => console.log("errpr", err)}
+          onLogout={console.info()}
+          useLoginForm
         >
           <button id="custom-login-btn">
             <img

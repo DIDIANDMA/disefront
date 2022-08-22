@@ -1,10 +1,14 @@
 import Vivino from "../Svg/Logo/Vivino";
 import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../Contexts/ModalContext/ModalContext";
-import axios from "axios";
+import AXIOSCON from "../../axios";
+
 const Header = () => {
+  const login = localStorage.getItem("token");
   const [userInput, setUserInput] = useState("");
-  const { handleOpen } = useContext(ModalContext);
+  const [searchData, setSearchData] = useState([]);
+  const { handleOpen, isLogin } = useContext(ModalContext);
+
   const handleSearch = e => {
     const { value } = e.target;
     if (value.trim().length > 0) {
@@ -14,11 +18,12 @@ const Header = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      axios
-        .get(`https://dummyjson.com/products/search?q=${userInput}`)
-        .then(res => console.log(res.data.products));
-      //사용자가 5초이상 타자 입력이 없으면 요청 보내는 방향으로
-    }, 5000);
+      AXIOSCON.get(`/products/search?keyword=${userInput}`).then(res => {
+        if (res.status === 200) {
+          setSearchData(res.data);
+        }
+      });
+    }, 1000);
     return () => clearTimeout(timer);
   }, [userInput]);
 
@@ -47,7 +52,7 @@ const Header = () => {
               handleOpen();
             }}
           >
-            Login
+            {isLogin ? "Logout" : "Login"}
           </button>
         </div>
       </nav>

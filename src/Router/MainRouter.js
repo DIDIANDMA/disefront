@@ -7,6 +7,8 @@ import ProductList from "../pages/ProductList/ProductList";
 import NotFound from "../pages/NotFound/NotFound";
 import { ModalProvider } from "../Contexts/ModalContext/ModalContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const MainRouter = () => {
   return (
