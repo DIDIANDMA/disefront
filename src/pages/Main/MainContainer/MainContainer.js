@@ -25,7 +25,7 @@ const MainContainer = ({ children, isSelected, handleClick, FILTER }) => {
             })}
           </div>
           <p className=" text-40 py-3 font-semibold">
-            {isSelected.content.toLocaleString()}원 이상의 와인이 모여있어요
+            {}원 이상의 와인이 모여있어요
           </p>
         </div>
       </section>

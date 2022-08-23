@@ -19,7 +19,6 @@ const Login = () => {
           onSuccess={message => {
             if (message) {
               localStorage.setItem("token", message.response.access_token);
-              setIsLogin(true);
             }
           }}
           onFail={err => console.log("errpr", err)}

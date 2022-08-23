@@ -12,9 +12,10 @@ const FILTER = [
 const FILTER_MAP = new Map(FILTER.map(item => [item.id, item.content]));
 const Main = () => {
   const TOKEN = localStorage.getItem("token");
-  const { isLogin } = useContext(ModalContext);
-  const [isSelected, setIsSelected] = useState({ id: 1, content: 20000 });
+  const { isLogin, setIsLogin } = useContext(ModalContext);
+  const [isSelected, setIsSelected] = useState([{ id: 1, content: 20000 }]);
   const [mainData, setMainData] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     if (isLogin) {
@@ -35,22 +36,30 @@ const Main = () => {
           Authorization: `Bearer ${TOKEN}`,
         },
       })
-      .then(res => console.log(res.data));
+      .then(res => {
+        if (res) {
+          localStorage.setItem("USERS", JSON.stringify(res.data));
+          setIsLogin(true);
+        }
+      });
   }, [TOKEN]);
 
   const handleClick = e => {
-    const { id } = e.target;
-    if (isSelected.id === parseInt(id)) {
+    const { id, name } = e.target;
+    const check = isSelected.find(item => item.content === name);
+    if (check) {
       return;
     } else
-      setIsSelected({
-        id: parseInt(id),
-        content: FILTER_MAP.get(parseInt(id)),
-      });
+      setIsSelected([
+        {
+          id: parseInt(id),
+          content: FILTER_MAP.get(parseInt(id)),
+        },
+      ]);
   };
 
   useEffect(() => {
-    const price = isSelected.content;
+    const price = isSelected[0].content;
     if (price) {
       axios
         .get(
